@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FarmConnectMini")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0065ce637a5b65c6fed520bf70ac8ae346e243aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("FarmConnectMini")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FarmConnectMini")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
