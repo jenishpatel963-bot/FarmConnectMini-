@@ -13,30 +13,7 @@ It helps **farmers** manage their products and **users** explore available crops
 
 ---
 
-## 📸 Project Screenshots
 
-### 🏠 Homepage
-![Homepage](screenshot/Homepage.png)
-
----
-
-### 👨‍🌾 Farmer Dashboard
-![FarmerDashboard](screenshot/FarmerDashboard.png)
-
----
-
-### ➕ Add Items
-![Additems](screenshot/Additems.png)
-
----
-
-### 🗑️ Add / Delete Crops
-![AddDelete](screenshot/add-delete.png)
-
----
-
-### 🌾 Final Web Page
-![FinalWebPage](screenshot/FinalWebPage.png)
 
 ---
 
