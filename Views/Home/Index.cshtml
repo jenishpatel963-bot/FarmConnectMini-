@@ -1,0 +1,60 @@
+﻿@model IEnumerable<FarmConnectMini.Models.Crop>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- 🌿 Top Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3 px-4">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold text-success fs-3" href="#">
+            🌾 FarmConnect
+        </a>
+        <div class="d-flex ms-auto">
+            <a asp-controller="Farmer" asp-action="Index" class="btn btn-success px-4 py-2 rounded-pill shadow-sm">
+                👨‍🌾 Go to Farmer Dashboard
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- 🌱 Hero Section -->
+<div class="container text-center mt-5 mb-4">
+    <h1 class="display-5 text-success fw-bold">Welcome to FarmConnect</h1>
+    <p class="lead text-muted">
+        Explore fresh crops directly from our farmers — no middlemen, fair prices, and pure quality 🌽🍅🌾
+    </p>
+</div>
+
+<!-- 🛒 Crop Listing Section -->
+<div class="container mt-4">
+    <h3 class="text-success fw-bold mb-4 text-center">🌱 Available Crops</h3>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-warning text-center shadow-sm">
+            No crops available right now. Please check back later!
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var crop in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm border-0 rounded-4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-success fw-bold">@crop.Name</h5>
+                            <p class="card-text text-muted mb-1">
+                                💰 <strong>Price:</strong> ₹@crop.Price
+                            </p>
+                            <p class="card-text text-muted">
+                                ⚖️ <strong>Quantity:</strong> @crop.Quantity kg
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

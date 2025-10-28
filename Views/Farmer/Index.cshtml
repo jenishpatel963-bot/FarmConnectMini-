@@ -1,0 +1,52 @@
+@model IEnumerable<FarmConnectMini.Models.Crop>
+@{
+    ViewData["Title"] = "Farmer Dashboard";
+}
+
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-success">🌱 Farmer Dashboard</h2>
+        <a asp-action="AddCrop" class="btn btn-success px-4 py-2 rounded-pill shadow-sm">+ Add Crop</a>
+    </div>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-warning text-center p-4 shadow-sm rounded-4">
+            <h5 class="mb-0">No crops found. Click <strong>“Add Crop”</strong> to start!</h5>
+        </div>
+    }
+    else
+    {
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+            <div class="card-body bg-light p-0">
+                <table class="table table-hover table-striped mb-0 align-middle">
+                    <thead class="table-success text-center">
+                        <tr>
+                            <th>🌾 Crop Name</th>
+                            <th>💰 Price (₹)</th>
+                            <th>⚖️ Quantity (kg)</th>
+                            <th>⚙️ Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var crop in Model)
+                        {
+                            <tr class="text-center">
+                                <td>@crop.Name</td>
+                                <td>@crop.Price</td>
+                                <td>@crop.Quantity</td>
+                                <td>
+                                    <form asp-action="Delete" asp-route-id="@crop.Id" method="post" class="d-inline">
+                                        <button type="submit" class="btn btn-outline-danger btn-sm rounded-pill shadow-sm">
+                                            🗑 Delete
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+</div>
