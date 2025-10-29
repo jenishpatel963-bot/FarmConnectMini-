@@ -87,9 +87,6 @@ Build and Run
 dotnet run
 
 
-Access in Browser
-
-https://localhost:5165
 
 🧪 How to Use
 
